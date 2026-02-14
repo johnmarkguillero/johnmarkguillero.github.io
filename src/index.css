@@ -1,0 +1,17 @@
+/* Global CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dark mode support */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
