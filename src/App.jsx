@@ -32,7 +32,7 @@ function App() {
           transition: "background 0.3s, color 0.3s", // smooth transition for background & text
         }}
       >
-        <Home />
+        <Home theme={themeColor}/>
         <About />
         <Projects />
       </main>

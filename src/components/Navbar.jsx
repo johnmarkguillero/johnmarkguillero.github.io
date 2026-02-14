@@ -29,7 +29,7 @@ function Navbar({ darkMode, setDarkMode, themeColor, setThemeColor }) {
         style={navbarStyle}
       >
         <div className="container">
-          <a className="navbar-brand fw-bold" href="#home">
+          <a className="navbar-brand fw-bold" href="#home" style={{ color: themeColor.text }}>
             Portfolio
           </a>
 
