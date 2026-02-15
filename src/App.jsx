@@ -3,11 +3,13 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [themeColor, setThemeColor] = useState({
-  colors: ["#0077be", "#00aaff", "#00d4ff"],
+    colors: ["#0077be", "#00aaff", "#00d4ff"],
     text: "#ffffff",
   }); // default to first color
 
@@ -15,9 +17,13 @@ function App() {
     document.body.classList.toggle("dark-mode", darkMode);
   }, [darkMode]);
 
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
-       <Navbar
+      <Navbar
         darkMode={darkMode}
         setDarkMode={setDarkMode}
         themeColor={themeColor}
@@ -32,11 +38,10 @@ function App() {
           transition: "background 0.3s, color 0.3s", // smooth transition for background & text
         }}
       >
-        <Home theme={themeColor}/>
-        <About />
-        <Projects />
+        <Home theme={themeColor} />
+        <About theme={themeColor} />
+        <Projects theme={themeColor} />
       </main>
-
     </>
   );
 }
