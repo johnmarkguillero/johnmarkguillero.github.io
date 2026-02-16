@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import MyImage from "../assets/Me.png";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 function Home({ theme }) {
   const [text, setText] = useState("");
@@ -158,16 +161,40 @@ function Home({ theme }) {
             perspective: "1000px", // needed for 3D
           }}
         >
-          <div
+          <motion.div
             className="image-wrapper"
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            whileHover={{
+              scale: 1.05,
+              rotate: 1.5,
+            }}
             style={{
-              transition: "transform 0.4s ease",
+              display: "inline-block",
+              borderRadius: "24px",
             }}
           >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdK_dnE_5cezDHypwWCPUwWlUQU0y4pwvyDA&s"
+            <motion.img
+              src={MyImage}
               alt="John Mark"
-              className="animated-image"
+              initial={{ scale: 0.9 }}
+              animate={{
+                scale: 1,
+                y: [0, -8, 0], // floating animation
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              whileHover={{
+                boxShadow: `
+                  0 30px 60px rgba(0,0,0,0.35),
+                  0 0 60px rgba(255,255,255,0.25)
+                `,
+              }}
               style={{
                 width: "320px",
                 height: "380px",
@@ -177,10 +204,9 @@ function Home({ theme }) {
                   0 20px 40px rgba(0,0,0,0.25),
                   0 0 40px rgba(255,255,255,0.15)
                 `,
-                transition: "all 0.4s ease",
               }}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
 

@@ -3,13 +3,15 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import Footer from "./pages/Footer";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [themeColor, setThemeColor] = useState({
-    colors: ["#0077be", "#00aaff", "#00d4ff"],
+    colors: ["#1a1a2e", "#162447", "#1f4068"],
     text: "#ffffff",
   }); // default to first color
 
@@ -41,6 +43,9 @@ function App() {
         <Home theme={themeColor} />
         <About theme={themeColor} />
         <Projects theme={themeColor} />
+        
+        <Footer theme={themeColor} />
+
       </main>
     </>
   );
