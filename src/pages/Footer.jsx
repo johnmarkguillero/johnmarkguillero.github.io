@@ -22,13 +22,15 @@ function Footer({ theme }) {
         background: theme.colors[0],
         color: theme.text,
         borderTop: `1px solid ${theme.colors[2]}`,
+        overflowX: "hidden", // 🔥 prevents horizontal overflow
       }}
       className="py-5 mt-5"
     >
       <div className="container" id="contact">
-        <div className="row gy-4">
+        {/* 🔥 Removed gy-4 (gutters cause overflow) */}
+        <div className="row">
           {/* About */}
-          <div className="col-md-4">
+          <div className="col-12 col-md-4 mb-4">
             <h5 className="fw-bold mb-3">Guillero, John Mark</h5>
             <p className="mb-0" style={{ opacity: 0.8 }}>
               Frontend Developer building modern, responsive, and user-focused
@@ -37,14 +39,18 @@ function Footer({ theme }) {
           </div>
 
           {/* Contact */}
-          <div className="col-md-4">
+          <div className="col-12 col-md-4 mb-4">
             <h6 className="fw-bold mb-3">Contact</h6>
 
             <p className="mb-2 d-flex align-items-center gap-2">
               <FaEnvelope />
               <a
                 href="mailto:johnmarkguillero1@gmail.com"
-                style={{ color: theme.text, textDecoration: "none" }}
+                style={{
+                  color: theme.text,
+                  textDecoration: "none",
+                  wordBreak: "break-word", // 🔥 prevents email overflow
+                }}
               >
                 johnmarkguillero1@gmail.com
               </a>
@@ -54,7 +60,10 @@ function Footer({ theme }) {
               <FaPhoneAlt />
               <a
                 href="tel:+639999624267"
-                style={{ color: theme.text, textDecoration: "none" }}
+                style={{
+                  color: theme.text,
+                  textDecoration: "none",
+                }}
               >
                 +63 9999 624 267
               </a>
@@ -62,7 +71,7 @@ function Footer({ theme }) {
           </div>
 
           {/* Social */}
-          <div className="col-md-4">
+          <div className="col-12 col-md-4 mb-4">
             <h6 className="fw-bold mb-3">Connect</h6>
 
             <div className="d-flex gap-4 fs-4">
@@ -75,9 +84,7 @@ function Footer({ theme }) {
                   aria-label={label}
                   whileHover={{ scale: 1.15, y: -4 }}
                   transition={{ type: "spring", stiffness: 260 }}
-                  style={{
-                    color: theme.text,
-                  }}
+                  style={{ color: theme.text }}
                 >
                   <Icon />
                 </motion.a>
@@ -87,7 +94,12 @@ function Footer({ theme }) {
         </div>
 
         {/* Bottom */}
-        <hr style={{ borderColor: theme.colors[2], marginTop: 40 }} />
+        <hr
+          style={{
+            borderColor: theme.colors[2],
+            marginTop: 40,
+          }}
+        />
 
         <div className="text-center small" style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Guillero, John Mark. Built with React &

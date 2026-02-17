@@ -1,4 +1,8 @@
 /* Global CSS */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
@@ -8,6 +12,7 @@ body {
 /* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
+  width: 100% !important;
 }
 
 /* Dark mode support */

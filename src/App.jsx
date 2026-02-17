@@ -43,9 +43,7 @@ function App() {
         <Home theme={themeColor} />
         <About theme={themeColor} />
         <Projects theme={themeColor} />
-        
         <Footer theme={themeColor} />
-
       </main>
     </>
   );

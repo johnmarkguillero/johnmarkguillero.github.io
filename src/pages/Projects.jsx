@@ -89,7 +89,7 @@ function Projects({ theme }) {
           />
         </div>
 
-        <div className="row g-5">
+        <div className="row g-3">
           {projects.map((proj, idx) => (
             <div className="col-lg-6" key={idx}>
               <motion.div
@@ -105,6 +105,7 @@ function Projects({ theme }) {
                   boxShadow: `0 20px 40px ${theme.colors[1]}30`,
                   transition: "0.4s ease",
                   height: "100%", // important
+                  marginTop: "1%",
                 }}
               >
                 {/* Carousel */}
@@ -305,6 +306,7 @@ function Projects({ theme }) {
         .project-card:hover .project-image {
           transform: scale(1.08);
         }
+          
       `}</style>
     </section>
   );
