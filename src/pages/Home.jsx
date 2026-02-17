@@ -94,7 +94,7 @@ function Home({ theme }) {
                 letterSpacing: "1px",
               }}
             >
-              GUILLERO, JOHN MARK12321313
+              GUILLERO, JOHN MARK
             </span>
           </h1>
 
