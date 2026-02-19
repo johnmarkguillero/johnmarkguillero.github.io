@@ -112,7 +112,7 @@ function About({ theme }) {
               theme={theme}
               logo={acipLogo}
               title="ACIP INTL PHILS INC"
-              date="August 19, 2025 - February 11, 2026"
+              date="August 19, 2024 - February 11, 2026"
               description={[
                 "Develop software tailored to client preferences.",
                 "Handle client queries and technical concerns.",
@@ -125,8 +125,8 @@ function About({ theme }) {
             <ExperienceCard
               theme={theme}
               logo={jcbaLogo}
-              title="JCBA Solutions and Consultancy, Inc"
-              date="Internship"
+              title="JCBA Solutions and Consultancy, Inc [Internship]"
+              date="September 1, 2024 - December 1, 2024"
               description={[
                 "SAP B1 installation, maintenance, and customization.",
                 "Full Stack Development and application maintenance.",
@@ -138,8 +138,8 @@ function About({ theme }) {
             <ExperienceCard
               theme={theme}
               logo={birLogo}
-              title="BIR PASIG"
-              date="Internship"
+              title="BIR PASIG [Internship]"
+              date="January 14, 2024 - April 14, 2024"
               description={[
                 "Assisted taxpayers with concerns and inquiries.",
                 "Managed TIN ID applications.",
